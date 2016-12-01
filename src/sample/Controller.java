@@ -29,6 +29,7 @@ public class Controller implements Initializable{
         radioMult.setToggleGroup(toggleGroup);
         radioDiv.setToggleGroup(toggleGroup);
         radioAdd.setSelected(true);
+        operation = radioAdd.getText();
         toggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
             if (toggleGroup.getSelectedToggle() != null) {
                 operation = ((RadioButton)newValue.getToggleGroup().getSelectedToggle()).getText();
