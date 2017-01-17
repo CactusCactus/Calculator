@@ -58,15 +58,15 @@ public class Controller implements Initializable{
         if(firstNum.getText() != null || secondNum.getText() != null) {
             Double firstVal = Double.parseDouble(firstNum.getText());
             Double secondVal = Double.parseDouble(secondNum.getText());
-
+            Operations operations = new Operations();
             if (operation.equals(radioAdd.getText())) {
-                result.setText((firstVal + secondVal) + "");
+                result.setText(String.valueOf(operations.add(firstVal,secondVal)));
             } else if (operation.equals(radioSub.getText())) {
-                result.setText((firstVal - secondVal) + "");
+                result.setText(String.valueOf(operations.substract(firstVal,secondVal)));
             } else if (operation.equals(radioMult.getText())) {
-                result.setText((firstVal * secondVal) + "");
+                result.setText(String.valueOf(operations.multiply(firstVal,secondVal)));
             } else if (operation.equals(radioDiv.getText())) {
-                result.setText((firstVal / secondVal) + "");
+                result.setText(String.valueOf(operations.divide(firstVal,secondVal)));
             }
         }
     }
